@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#"
+      th:action="@{/process}"
+      th:object="${room}"
+      method="post">
+    <input type="hidden" th:field="*{roomId}" />
+    Adress:<input type="text" th:field="*{address}" />
+    <span th:if="${#fields.hasErrors('address')}"
+          th:errors="*{address}"></span><br />
+
+    Description:<textarea rows="3" th:field="*{description}" />
+    <span th:if="${#fields.hasErrors('description')}"
+          th:errors="*{description}"></span><br />
+
+    Wifi:<input type="text" th:field="*{wifi}" />
+    <span th:if="${#fields.hasErrors('wifi')}"
+          th:errors="*{wifi}"></span><br />
+
+    City:<input type="text" th:field="*{city}" />
+    <span th:if="${#fields.hasErrors('city')}"
+          th:errors="*{city}"></span><br />
+
+    State:<input type="text" th:field="*{state}" />
+    <span th:if="${#fields.hasErrors('state')}"
+          th:errors="*{state}"></span><br />
+
+    Price:<input type="text" th:field="*{price}" />
+    <span th:if="${#fields.hasErrors('price')}"
+          th:errors="*{price}"></span><br />
+
+    Rules:<input type="text" th:field="*{rules}" />
+    <span th:if="${#fields.hasErrors('rules')}"
+          th:errors="*{rules}"></span><br />
+
+    Cable:<input type="text" th:field="*{cable}" />
+    <span th:if="${#fields.hasErrors('cable')}"
+          th:errors="*{cable}"></span><br />
+
+    Bath:<input type="text" th:field="*{bath}" />
+    <span th:if="${#fields.hasErrors('bath')}"
+          th:errors="*{bath}"></span><br />
+
+
+    Status:<input type="text" th:field="*{status}" />
+    <span th:if="${#fields.hasErrors('status')}"
+          th:errors="*{status}"></span><br />
+
+    <input type="submit" value="Submit Here">
+</form>
+</body>
+</html>
+
+
