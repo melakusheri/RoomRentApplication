@@ -1,4 +1,5 @@
-package com.seb.roomrentapplication;
+package com.seb.roomrentapplication.service;
+import com.seb.roomrentapplication.model.AppUser;
 import org.springframework.security.core.GrantedAuthority;
 
 import java.util.Collection;

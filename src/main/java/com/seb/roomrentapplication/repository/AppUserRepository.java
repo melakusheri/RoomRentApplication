@@ -1,5 +1,6 @@
-package com.seb.roomrentapplication;
+package com.seb.roomrentapplication.repository;
 
+import com.seb.roomrentapplication.model.AppUser;
 import org.springframework.data.repository.CrudRepository;
 
 public interface AppUserRepository extends CrudRepository<AppUser,Long>{

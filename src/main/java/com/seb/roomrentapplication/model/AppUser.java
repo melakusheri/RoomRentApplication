@@ -1,13 +1,11 @@
-package com.seb.roomrentapplication;
+package com.seb.roomrentapplication.model;
 
-import org.hibernate.annotations.ManyToAny;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 //@Table(name="User_Data")
@@ -16,6 +14,7 @@ public class AppUser {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long userId;
 
+    @Email
     @Column(name = "email",nullable = false)
     private String email;
 

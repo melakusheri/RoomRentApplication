@@ -1,12 +1,15 @@
-package com.seb.roomrentapplication;
+package com.seb.roomrentapplication.service;
+import com.seb.roomrentapplication.model.AppUser;
+import com.seb.roomrentapplication.model.Role;
+import com.seb.roomrentapplication.model.Room;
+import com.seb.roomrentapplication.repository.RoleRepository;
+import com.seb.roomrentapplication.repository.AppUserRepository;
+import com.seb.roomrentapplication.repository.RoomRepository;
+import com.seb.roomrentapplication.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 @Component
 public class DataLoader implements CommandLineRunner{

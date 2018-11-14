@@ -1,7 +1,7 @@
-package com.seb.roomrentapplication;
+package com.seb.roomrentapplication.configuration;
 
-import com.seb.roomrentapplication.AppUserRepository;
-import com.seb.roomrentapplication.SSUserDetailsService;
+import com.seb.roomrentapplication.repository.AppUserRepository;
+import com.seb.roomrentapplication.service.SSUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -39,7 +39,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()//.antMatchers("/login").permitAll()
 //                .antMatchers("/users").hasAuthority("USER")
 
-                .antMatchers("/","/h2/**","/register","/assets/**").permitAll()
+                .antMatchers("/","/h2/**","/register","/assets/**","/sendEmail").permitAll()
                 .antMatchers("admin/update/**").hasAuthority("ADMIN")
                 .antMatchers("user/update/**").hasAuthority("USER")
                 .antMatchers("/add","/detail/**").hasAnyAuthority("USER,ADMIN")

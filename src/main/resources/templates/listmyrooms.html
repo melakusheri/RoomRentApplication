@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>List of Your Rooms</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="/assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+    <link href="/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link type="text/css" href="/assets/css/argon.min.css" rel="stylesheet">
+
 </head>
 <body>
+<div th:replace="base :: navlinks"></div>
 <table>
     <tr>
         <th>Adress</th>
@@ -25,5 +35,11 @@
         </td>
     </tr>
 </table>
+<script src="/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/assets/vendor/popper/popper.min.js"></script>
+<script src="/assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+<!-- Theme JS -->
+<script src="/assets/js/argon.min.js"></script>
 </body>
 </html>

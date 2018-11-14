@@ -15,65 +15,76 @@
 
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-default">
-    <div class="container">
-        <a class="navbar-brand" href="#">Steve Rental</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar-default">
-            <div class="navbar-collapse-header">
-                <div class="row">
-                    <div class="col-6 collapse-brand">
-                        <a href="index.html">
-                            <img src="assets/img/brand/blue.png">
-                        </a>
-                    </div>
-                    <div class="col-6 collapse-close">
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Steve Rental</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/add">Add Rooms</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/listmyrooms">List My Rooms</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/register">Register Now</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Log In</a>
+            </li>
+        </ul>
 
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+
+            <form action="/sendEmail" method="post">
+                <button class="btn btn-info" type="submit">Send Email</button>
+            </form>
 
         </div>
     </div>
-</nav>
+</div>
 
-<a class="btn btn-info" role="button" href="/add">Add A room</a><br />
-<a class="btn btn-info" role="button"  href="/listmyrooms">List My Rooms</a><br />
+<div class="container">
+    <div class="row">
+        <div class="col-9">
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th>Adress</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Price</th>
+                    <th>More</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="room : ${rooms}">
+                    <td th:text="${room.address}"></td>
+                    <td th:text="${room.city}"></td>
+                    <td th:text="${room.state}"></td>
+                    <td th:text="${room.price}"></td>
 
+                    <td>
 
-
-
-<table class="table">
-    <thead class="thead-dark">
-    <tr>
-        <th>Adress</th>
-        <th>City</th>
-        <th>State</th>
-        <th>Price</th>
-        <th>More</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="room : ${rooms}">
-        <td th:text="${room.address}"></td>
-        <td th:text="${room.city}"></td>
-        <td th:text="${room.state}"></td>
-        <td th:text="${room.price}"></td>
-
-        <td>
-
-            <a class="btn btn-info" role="button" th:href="@{/detail/{roomId}(roomId=${room.roomId})}">Show More</a>
-        </td>
-    </tr>
-    </tbody>
-</table>
+                        <a class="btn btn-info" role="button" th:href="@{/detail/{roomId}(roomId=${room.roomId})}">Show
+                            More</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 <!-- Core -->
 <script src="/assets/vendor/jquery/jquery.min.js"></script>
 <script src="/assets/vendor/popper/popper.min.js"></script>

@@ -5,6 +5,62 @@
     <title>Base Page</title>
 </head>
 <body>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List Rooms</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
+    <!-- Icons -->
+    <link href="/assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+    <link href="/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link type="text/css" href="/assets/css/argon.min.css" rel="stylesheet">
+
+</head>
+<body>
+<div th:fragment="navlinks">
+<nav class="navbar navbar-expand-lg navbar-dark bg-default">
+    <div class="container">
+        <a class="navbar-brand" href="#">Steve Rental</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-default">
+            <div class="navbar-collapse-header">
+                <div class="row">
+                    <div class="col-6 collapse-brand">
+                        <a href="index.html">
+                            <img src="assets/img/brand/blue.png">
+                        </a>
+                    </div>
+                    <div class="col-6 collapse-close">
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</nav>
+
+</div>
+<!-- Core -->
+<script src="/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/assets/vendor/popper/popper.min.js"></script>
+<script src="/assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+<!-- Theme JS -->
+<script src="/assets/js/argon.min.js"></script>
+</body>
+</html>
 </body>
 </html>

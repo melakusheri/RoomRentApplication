@@ -1,6 +1,10 @@
-package com.seb.roomrentapplication;
+package com.seb.roomrentapplication.service;
 
 
+import com.seb.roomrentapplication.model.AppUser;
+import com.seb.roomrentapplication.model.Role;
+import com.seb.roomrentapplication.repository.AppUserRepository;
+import com.seb.roomrentapplication.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

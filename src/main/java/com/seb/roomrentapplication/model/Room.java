@@ -1,5 +1,7 @@
-package com.seb.roomrentapplication;
+package com.seb.roomrentapplication.model;
 
+
+import com.seb.roomrentapplication.model.AppUser;
 
 import javax.persistence.*;
 
@@ -20,12 +22,13 @@ public class Room {
     private String cable;
     private String bath;
     private String status;
+    private String pic;
 
     @ManyToOne
 
     private AppUser appUser;
 
-    public Room(String address, String city, String state, String price, String description, String rules, String wifi, String cable, String bath, AppUser appUser,String status) {
+    public Room(String address, String city, String state, String price, String description, String rules, String wifi, String cable, String bath, AppUser appUser,String status,String pic) {
         this.setAddress(address);
         this.setCity(city);
         this.setState(state);
@@ -37,6 +40,7 @@ public class Room {
         this.setBath(bath);
         this.setAppUser(appUser);
         this.setStatus(status);
+        this.setPic(pic);
     }
 
     public Room() {
@@ -136,5 +140,13 @@ public class Room {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getPic() {
+        return pic;
+    }
+
+    public void setPic(String pic) {
+        this.pic = pic;
     }
 }

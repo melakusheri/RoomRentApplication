@@ -1,5 +1,7 @@
-package com.seb.roomrentapplication;
+package com.seb.roomrentapplication.model;
 
+
+import com.seb.roomrentapplication.model.AppUser;
 
 import javax.persistence.*;
 import java.util.ArrayList;
