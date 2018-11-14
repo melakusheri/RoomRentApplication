@@ -11,6 +11,6 @@ Rules :<span th:text="${room.rules}"></span><br />
 Wifi:<span th:text="${room.wifi}"></span><br />
 Cabel:<span th:text="${room.cable}"></span><br />
 Bath:<span th:text="${room.bath}"></span><br />
-<a th:href="@{/update/{roomId}(roomId=${room.roomId})}">Update</a>
+<a th:href="@{admin/update/{roomId}(roomId=${room.roomId})}">Update</a>
 </body>
 </html>

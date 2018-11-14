@@ -21,7 +21,7 @@
         <td th:text="${room.price}"></td>
         <td th:text="${room.status}"></td>
         <td>
-            <a th:href="@{/update/{roomId}(roomId=${room.roomId})}">Update</a>
+            <a th:href="@{user/update/{roomId}(roomId=${room.roomId})}">Update</a>
         </td>
     </tr>
 </table>

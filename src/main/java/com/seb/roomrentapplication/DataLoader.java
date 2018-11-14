@@ -35,7 +35,7 @@ public class DataLoader implements CommandLineRunner{
         room1.setPrice("1500.00");
         room1.setDescription("Very Nice");
         room1.setRules("No smoking");
-        room1.setWifi("yes");
+        room1.setWifi("Wifi Availabe");
         room1.setCable("none");
         room1.setBath("private");
         roomRepository.save(room1);
@@ -47,7 +47,7 @@ public class DataLoader implements CommandLineRunner{
         room2.setPrice("500.00");
         room2.setDescription("Very Nice");
         room2.setRules("No smoking");
-        room2.setWifi("yes");
+        room2.setWifi("Wifi Available");
         room2.setCable("none");
         room2.setBath("private");
         roomRepository.save(room2);
@@ -59,7 +59,7 @@ public class DataLoader implements CommandLineRunner{
         room3.setPrice("2000.00");
         room3.setDescription("Very Nice");
         room3.setRules("No smoking");
-        room3.setWifi("no");
+        room3.setWifi("No Wifi Access");
         room3.setCable("none");
         room3.setBath("private");
         roomRepository.save(room3);

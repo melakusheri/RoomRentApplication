@@ -64,13 +64,20 @@ public class HomeController {
 
         return "showmore";
     }
-    @RequestMapping("/update/{roomId}")
-    public String update(@PathVariable("roomId") long roomId, Model model){
+    @RequestMapping("/user/update/{roomId}")
+    public String updateUser(@PathVariable("roomId") long roomId, Model model){
 
 
         model.addAttribute("room", roomRepository.findById(roomId).get());
 
         return "roomform";
     }
+    @RequestMapping("/admin/update/{roomId}")
+    public String updateAdmin(@PathVariable("roomId") long roomId, Model model){
 
+
+        model.addAttribute("room", roomRepository.findById(roomId).get());
+
+        return "roomform";
+    }
 }
