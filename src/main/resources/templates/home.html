@@ -14,7 +14,7 @@
     <link type="text/css" href="/assets/css/argon.min.css" rel="stylesheet">
 
 </head>
-<body>
+<body >
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Steve Rental</a>
@@ -36,12 +36,13 @@
                 <a class="nav-link" href="/register">Register Now</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Log In</a>
+                <a class="nav-link" href="/login">Log In</a>
             </li>
         </ul>
 
     </div>
 </nav>
+<div class="jumbotron jumbotron-fluid" >
 <div class="container">
     <div class="row">
         <div class="col-3">
@@ -60,15 +61,24 @@
             <table class="table">
                 <thead class="thead-dark">
                 <tr>
+
+                    <th></th>
                     <th>Adress</th>
                     <th>City</th>
                     <th>State</th>
                     <th>Price</th>
                     <th>More</th>
+
                 </tr>
                 </thead>
                 <tbody>
                 <tr th:each="room : ${rooms}">
+                    <th>
+                    <div th:if="${room.pic} != null">
+                        <img th:src="${room.pic}" />
+                        <hr />
+                    </div>
+                    </th>
                     <td th:text="${room.address}"></td>
                     <td th:text="${room.city}"></td>
                     <td th:text="${room.state}"></td>
@@ -76,7 +86,7 @@
 
                     <td>
 
-                        <a class="btn btn-info" role="button" th:href="@{/detail/{roomId}(roomId=${room.roomId})}">Show
+                <a class="btn btn-info" role="button" th:href="@{/detail/{roomId}(roomId=${room.roomId})}">Show
                             More</a>
                     </td>
                 </tr>
@@ -84,6 +94,7 @@
             </table>
         </div>
     </div>
+</div>
 </div>
 <!-- Core -->
 <script src="/assets/vendor/jquery/jquery.min.js"></script>
